@@ -1,4 +1,4 @@
-# 📄 AI Powered ATS Resume Builder
+# 📄 ATS-friendly resume builder
 
 A single, ultra-polished, and visually stunning ATS-friendly resume builder. This tool empowers users to effortlessly create professional resumes optimized for Applicant Tracking Systems, ensuring their applications stand out to recruiters. Built entirely with **Vanilla HTML, CSS, and PHP**, it offers a seamless, interactive experience without external JavaScript libraries or complex frameworks.
 
