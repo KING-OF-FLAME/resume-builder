@@ -3,7 +3,7 @@
 A single, ultra-polished, and visually stunning ATS-friendly resume builder. This tool empowers users to effortlessly create professional resumes optimized for Applicant Tracking Systems, ensuring their applications stand out to recruiters. Built entirely with **Vanilla HTML, CSS, and PHP**, it offers a seamless, interactive experience without external JavaScript libraries or complex frameworks.
 
 <p align="center">
-  <img src="https://i.ibb.co/9ktMTbWP/make-a-logo-for-resume-builder.jpg" alt="Resume Builder Screenshot" width="700"> 
+  <img src="https://i.ibb.co/9ktMTbWP/make-a-logo-for-resume-builder.jpg" alt="Resume Builder Screenshot" width="200"> 
   <br>
   <i>(A glimpse of the modern UI and live preview in action)</i>
 </p>
