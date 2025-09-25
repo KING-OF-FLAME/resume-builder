@@ -101,9 +101,10 @@ If you have suggestions for improving this project, please fork the repo and cre
 -------------------------------------------------
 
 ## 📧 Contact 📍
+## Contact 📍
 
-[Your GitHub Username (e.g., KING OF FLAME)](https://github.com/KING-OF-FLAME) - Creator and Maintainer
-[Your Instagram Handle (e.g., @yash.developer)](https://www.instagram.com/yash.developer/)
+Github: [KING OF FLAME](https://github.com/KING-OF-FLAME) - Creator and Maintainer
+Instagram: [yash.developer](https://instagram.com/yash.developer)
 
 *(Please replace `your-username`, `your-repo-name`, and `your.instagram.handle` with your actual details.)*
 
