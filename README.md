@@ -8,9 +8,9 @@ A single, ultra-polished, and visually stunning ATS-friendly resume builder. Thi
   <i>(A glimpse of the modern UI and live preview in action)</i>
 </p>
 
-[![Repo Size](https://img.shields.io/github/repo-size/your-username/your-repo-name?style=flat-square&color=orange)](https://github.com/your-username/your-repo-name)
-[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/your-username/your-repo-name)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/your-username/your-repo-name/graphs/commit-activity)
+[![Repo Size](https://img.shields.io/github/repo-size/KING-OF-FLAME/resume-builder?style=flat-square&color=orange)](https://github.com/KING-OF-FLAME/resume-builder)
+[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/KING-OF-FLAME/resume-builder)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/KING-OF-FLAME/resume-builder/graphs/commit-activity)
 
 -------------------------------------------------
 
