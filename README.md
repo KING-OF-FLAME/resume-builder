@@ -106,8 +106,6 @@ If you have suggestions for improving this project, please fork the repo and cre
 Github: [KING OF FLAME](https://github.com/KING-OF-FLAME) - Creator and Maintainer
 Instagram: [yash.developer](https://instagram.com/yash.developer)
 
-*(Please replace `your-username`, `your-repo-name`, and `your.instagram.handle` with your actual details.)*
-
 -------------------------------------------------
 
 ## 🙏 Acknowledgments 📍
