@@ -1,0 +1,305 @@
+/* ==== ROOT VARIABLES & GLOBAL RESETS ==== */
+:root {
+    --primary-color: #4A90E2; 
+    --primary-hover: #357ABD;
+    --background-color: #F4F7FC; 
+    --surface-color: #FFFFFF;
+    --sidebar-color: #F8F9FA;
+    --text-primary: #333D47;
+    --text-secondary: #6E7A8A;
+    --border-color: #D8E1EC;
+    --danger-color: #E94E77;
+    --font-family: 'Poppins', sans-serif;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    --border-radius: 10px;
+    --transition-speed: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* ==== MAIN APP LAYOUT (Unchanged) ==== */
+.app-container {
+    display: grid;
+    grid-template-columns: minmax(450px, 1fr) 1.5fr;
+    min-height: 100vh;
+}
+
+/* ==== FORM SECTION (Unchanged) ==== */
+.form-section {
+    background-color: var(--surface-color);
+    padding: 2.5rem;
+    overflow-y: auto;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border-color);
+}
+
+.form-header h1 { font-size: 2rem; }
+.form-header p { color: var(--text-secondary); }
+.header-buttons { margin-top: 1.5rem; }
+.header-btn {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.header-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+.form-body { flex-grow: 1; }
+.form-block {
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+.form-block summary {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    background-color: #FDFEFF;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-block summary::after {
+    content: '›';
+    font-size: 1.8rem;
+    font-weight: 300;
+    transition: transform var(--transition-speed);
+    transform: rotate(90deg);
+}
+.form-block[open] > summary::after {
+    transform: rotate(-90deg);
+}
+.form-block > div {
+    padding: 1.25rem;
+    border-top: 1px solid var(--border-color);
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.form-group.full-width { grid-column: 1 / -1; }
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-family: var(--font-family);
+    font-size: 0.95rem;
+}
+textarea { min-height: 120px; }
+.btn-add {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px dashed var(--border-color);
+    background: transparent;
+    color: var(--primary-color);
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.dynamic-item {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+.btn-delete {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* ==== NEW STYLES for TWO-COLUMN PREVIEW ==== */
+.preview-section {
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.resume-paper-twocol {
+    width: 210mm;
+    min-height: 297mm;
+    background: var(--surface-color);
+    box-shadow: var(--shadow);
+    font-size: 10pt;
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-header-twocol {
+    padding: 2rem;
+    text-align: center;
+}
+.resume-header-twocol h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+.resume-header-twocol p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.resume-body-twocol {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Main content is twice the size of the sidebar */
+    flex-grow: 1;
+}
+
+.resume-main {
+    padding: 0 2rem 2rem 2rem;
+}
+
+.resume-sidebar {
+    background-color: var(--sidebar-color);
+    padding: 2rem;
+    border-left: 1px solid var(--border-color);
+}
+.resume-sidebar .resume-section h2 {
+    font-size: 1.2rem;
+    text-align: left;
+    border-bottom: 1.5px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+.resume-sidebar a, .resume-sidebar p {
+    font-size: 0.9rem;
+    word-break: break-word;
+    margin-bottom: 0.5rem;
+}
+.resume-sidebar a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.resume-sidebar #previewSocials a {
+    display: block;
+}
+
+.resume-section {
+    margin-bottom: 1.5rem;
+}
+.resume-section h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    border-bottom: 1.5px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.dynamic-item-wrapper {
+    margin-bottom: 1rem;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.1rem;
+}
+.job-title, .degree, .project-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.job-company, .university {
+    font-style: italic;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+}
+.job-dates, .edu-dates {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--text-secondary);
+}
+.job-description, .achievements-list {
+    padding-left: 1.25rem;
+}
+.job-description li, .achievements-list li {
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+}
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.skill-tag {
+    background-color: #eef5ff;
+    color: var(--primary-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.cert-item, .lang-item {
+    font-size: 0.9rem;
+}
+.cert-issuer {
+    font-style: italic;
+}
+
+/* ==== RESPONSIVENESS (Unchanged) ==== */
+@media (max-width: 1200px) {
+    .app-container { grid-template-columns: 1fr; }
+    .form-section { height: auto; position: static; }
+    .preview-section { padding: 1.5rem; }
+    .resume-paper-twocol { width: 100%; min-height: auto; }
+}
+
+@media (max-width: 768px) {
+    .resume-body-twocol { grid-template-columns: 1fr; }
+    .resume-sidebar { border-left: none; }
+}
